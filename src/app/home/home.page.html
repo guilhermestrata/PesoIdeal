@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Somar Números
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-radio-group [(ngModel)] = "radioSelecionada">
+      <ion-item>
+        <ion-label>Homem</ion-label>
+        <ion-radio slot="end" value="Homem"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Mulher</ion-label>
+        <ion-radio slot="end" value="Mulher"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <ion-item>
+    <ion-label position="floating">Digite sua altura:</ion-label>
+    <ion-input [(ngModel)]="altura"></ion-input>
+  </ion-item>
+
+<ion-button size="small" (click)="verificarRadio()">Calcular Peso Ideal</ion-button>
+
+</ion-content>
